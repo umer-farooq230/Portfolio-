@@ -37,20 +37,19 @@ The goal is to help the model generate accurate SQL queries with explanations ba
 
 ---
 
-### 3. Regime Switching Forecasting Engine
+### 3. Hidden Markov Model Regime Detection System
 **Description:**  
-Detects market regimes using engineered features from time series data and helps with forecasting. This is my one of the most advanced project and also in progress 
-
+A state-based model that identifies short-term regime shifts in high-frequency OHLCV data using statistical features, PCA, and probabilistic state transitions. Currently refining the system for faster updates and more stable regime boundaries.
 **Tech Stack:**  
-`pandas`, `scikit-learn`, `matplotlib`, `custom feature engineering`
+`pandas`, `numpy`, `hmmlearn`, `PCA`, `Monte Carlo`
 
 **Problem:**  
-Financial markets don’t behave the same all the time. Standard models assume stationarity, but I have used the volatility (the random spikes you see in the graphs)
+High-frequency data is noisy and non-stationary, making it difficult to understand when the market environment changes.
 
 **Solution:**  
-Switching regimes framework allows building dynamic models that adapt to market context.
+An HMM framework that models hidden states, compresses inputs with PCA, checks stability with LLN-based rolling estimates, and uses Monte Carlo sampling to test boundary robustness. This captures regime changes more reliably and in near–real-time.
 
-**🔗 Repo:** [regime_switching_engine](https://github.com/umer-farooq230/regime_switching_engine)
+**🔗 Repo:** This is still under production 
 
 ---
 
